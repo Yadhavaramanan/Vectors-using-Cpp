@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> y = {1, 2, 3, 4, 5, 6, 7};  // Initialize vector
+    
+    // Printing initial elements in the vector
+    for(int i = 0; i < y.size(); i++) {
+        cout << i << "->" << y[i] << endl;
+    }
+    
+    // Adding elements to the vector
+    y.push_back(8);
+    y.push_back(9);
+    y.push_back(11); 
+    y.push_back(10);
+    
+    cout << "After inserting elements into the vector.....," << endl;
+    
+    // Printing elements after insertion
+    for(int i = 0; i < y.size(); i++) {
+        cout << i << "->" << y[i] << endl;
+    }
+    
+    // Removing the last element
+    y.pop_back();
+    
+    cout << "After popping the last element from the vector.....," << endl;
+    
+    // Printing elements after pop_back
+    for(int i = 0; i < y.size(); i++) {
+        cout << i << "->" << y[i] << endl;
+    }
+    y.erase(y.begin() + 2);  // Removes the element at index 2
+    y.erase(y.begin() + 1, y.begin() + 3);  // Removes elements from index 1 to 2 (range)
+
+    y.insert(y.begin() + 2, 13);  // Inserts 99 at index 2
+    y.insert(y.begin(), 3, 14);   // Inserts 50 three times at the beginning
+
+    for(int i = 0; i < y.size(); i++) {
+        cout << i << "->" << y[i] << endl;
+    }
+    return 0;
+}
